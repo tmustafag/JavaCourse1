@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
+
+        System.out.print("Ürünün fiyatını giriniz :");
+        double fiyat= input.nextInt();
+
+        double kdvOranı = (fiyat<1000)? 0.18 : 0.08;
+        double kdv = fiyat * kdvOranı;
+        double kdvliFiyat = fiyat+kdv;
+
+        System.out.println("Ürünün fiyatı :" + fiyat);
+        System.out.println("Uygulanan KDV oranı :" + kdvOranı);
+        System.out.println("Ürünün KDV'si :" + kdv);
+        System.out.println("Ürünün KDV'li Fiyatı :" + kdvliFiyat);
+
+    }
+}
